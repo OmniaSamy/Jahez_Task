@@ -9,5 +9,5 @@ import Foundation
 
 struct GenreResponse: Codable {
     
-    var genres: [MovieModel]?
+    var genres: [GenreModel]?
 }

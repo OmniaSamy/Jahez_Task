@@ -12,10 +12,18 @@ struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            List(viewModel.trendingMoviesList, id: \.movieID) { movie in
+                Text(movie.title ?? "")
+            }
+            
+           
+        }.onAppear {
+            viewModel.getTrendingMovies()
+        }.loadingOverlay(isLoading: viewModel.isLoading) // ✅ Use it here
     }
 }
 
-//#Preview {
-//    HomeView()
-//}
+#Preview {
+    HomeView(viewModel: HomeViewModel.mock())
+}
