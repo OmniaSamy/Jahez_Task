@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76C13517F2064415BFBB0210 /* Pods_Jahez_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111AD701207E01F213646BD6 /* Pods_Jahez_Task.framework */; };
 		E3210ACB2E015A2E00D8D761 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3210AC12E015A2E00D8D761 /* AppDelegate.swift */; };
 		E3210ACC2E015A2E00D8D761 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3210AC22E015A2E00D8D761 /* SceneDelegate.swift */; };
 		E3210ACD2E015A2E00D8D761 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3210AC42E015A2E00D8D761 /* Assets.xcassets */; };
@@ -18,6 +19,21 @@
 		E3210AE32E015B2F00D8D761 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3210AE22E015B2F00D8D761 /* NetworkManager.swift */; };
 		E3210AE52E015B3C00D8D761 /* NetworkManager+ParseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3210AE42E015B3C00D8D761 /* NetworkManager+ParseResponse.swift */; };
 		E3210AE72E015B4800D8D761 /* NetworkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3210AE62E015B4800D8D761 /* NetworkDefaults.swift */; };
+		E3210AEA2E0163BE00D8D761 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3210AE92E0163BE00D8D761 /* Environment.swift */; };
+		E3210AEC2E0163E600D8D761 /* AppConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E3210AEB2E0163E600D8D761 /* AppConfig.xcconfig */; };
+		E32905102E016ED90002F28C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329050F2E016ED90002F28C /* NetworkError.swift */; };
+		E32905132E016EF70002F28C /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32905122E016EF70002F28C /* MovieModel.swift */; };
+		E32905152E016F0B0002F28C /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32905142E016F0B0002F28C /* NetworkResponse.swift */; };
+		E32905172E01723F0002F28C /* GenreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32905162E01723F0002F28C /* GenreModel.swift */; };
+		E32905192E017BF90002F28C /* GenreResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32905182E017BF90002F28C /* GenreResponseModel.swift */; };
+		E329051C2E017D3A0002F28C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E329051B2E017D3A0002F28C /* ViewController.xib */; };
+		E329051D2E017D3A0002F28C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329051A2E017D3A0002F28C /* ViewController.swift */; };
+		E32905202E017DA60002F28C /* BaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329051F2E017DA60002F28C /* BaseViewModelProtocol.swift */; };
+		E32905222E0181D10002F28C /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32905212E0181D10002F28C /* AppDelegate+Extension.swift */; };
+		E3887F242E016955003035A8 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3887F232E016955003035A8 /* MovieService.swift */; };
+		E3887F262E016966003035A8 /* NetworkManager+Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3887F252E016966003035A8 /* NetworkManager+Movie.swift */; };
+		E3887F2A2E016B08003035A8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3887F292E016B08003035A8 /* HomeViewModel.swift */; };
+		E3887F2C2E016B77003035A8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3887F2B2E016B76003035A8 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		111AD701207E01F213646BD6 /* Pods_Jahez_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jahez_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F416D87FA48AC852E1EE62 /* Pods-Jahez_Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jahez_Task.release.xcconfig"; path = "Target Support Files/Pods-Jahez_Task/Pods-Jahez_Task.release.xcconfig"; sourceTree = "<group>"; };
+		E31D810A42058E2F474D0B3D /* Pods-Jahez_Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jahez_Task.debug.xcconfig"; path = "Target Support Files/Pods-Jahez_Task/Pods-Jahez_Task.debug.xcconfig"; sourceTree = "<group>"; };
 		E3210A8B2E0158EE00D8D761 /* Jahez_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jahez_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3210AA12E0158EF00D8D761 /* Jahez_TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jahez_TaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3210AAB2E0158EF00D8D761 /* Jahez_TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jahez_TaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +72,21 @@
 		E3210AE22E015B2F00D8D761 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E3210AE42E015B3C00D8D761 /* NetworkManager+ParseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+ParseResponse.swift"; sourceTree = "<group>"; };
 		E3210AE62E015B4800D8D761 /* NetworkDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDefaults.swift; sourceTree = "<group>"; };
+		E3210AE92E0163BE00D8D761 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		E3210AEB2E0163E600D8D761 /* AppConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppConfig.xcconfig; sourceTree = "<group>"; };
+		E329050F2E016ED90002F28C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E32905122E016EF70002F28C /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		E32905142E016F0B0002F28C /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		E32905162E01723F0002F28C /* GenreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreModel.swift; sourceTree = "<group>"; };
+		E32905182E017BF90002F28C /* GenreResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreResponseModel.swift; sourceTree = "<group>"; };
+		E329051A2E017D3A0002F28C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E329051B2E017D3A0002F28C /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		E329051F2E017DA60002F28C /* BaseViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelProtocol.swift; sourceTree = "<group>"; };
+		E32905212E0181D10002F28C /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
+		E3887F232E016955003035A8 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		E3887F252E016966003035A8 /* NetworkManager+Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Movie.swift"; sourceTree = "<group>"; };
+		E3887F292E016B08003035A8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E3887F2B2E016B76003035A8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C13517F2064415BFBB0210 /* Pods_Jahez_Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +115,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		918F4669F8D6B34925BC929F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E31D810A42058E2F474D0B3D /* Pods-Jahez_Task.debug.xcconfig */,
+				75F416D87FA48AC852E1EE62 /* Pods-Jahez_Task.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B198D87D6E511EA91E1CB293 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				111AD701207E01F213646BD6 /* Pods_Jahez_Task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E3210A822E0158EE00D8D761 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +139,8 @@
 				E3210AD22E015A3A00D8D761 /* Jahez_TaskTests */,
 				E3210AD62E015A3C00D8D761 /* Jahez_TaskUITests */,
 				E3210A8C2E0158EE00D8D761 /* Products */,
+				918F4669F8D6B34925BC929F /* Pods */,
+				B198D87D6E511EA91E1CB293 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +159,7 @@
 			children = (
 				E3210AC12E015A2E00D8D761 /* AppDelegate.swift */,
 				E3210AC22E015A2E00D8D761 /* SceneDelegate.swift */,
+				E32905212E0181D10002F28C /* AppDelegate+Extension.swift */,
 			);
 			path = "AppDelegate+SceneDelegate";
 			sourceTree = "<group>";
@@ -114,10 +169,13 @@
 			children = (
 				E3210AC52E015A2E00D8D761 /* Info.plist */,
 				E3210AC32E015A2E00D8D761 /* AppDelegate+SceneDelegate */,
+				E329051E2E017D920002F28C /* Base */,
 				E3210AD92E015A6B00D8D761 /* StoryBoard */,
 				E3210ADC2E015AB600D8D761 /* Resources */,
 				E3210AE12E015B1500D8D761 /* NetworkServices */,
+				E329050E2E016EC10002F28C /* Models */,
 				E3210ADE2E015AEA00D8D761 /* Services */,
+				E3887F272E016AB9003035A8 /* Scenes */,
 			);
 			path = Jahez_Task;
 			sourceTree = "<group>";
@@ -151,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				E3210ADD2E015ABA00D8D761 /* Assets */,
+				E3210AE82E01632000D8D761 /* Configurations */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -174,11 +233,77 @@
 		E3210AE12E015B1500D8D761 /* NetworkServices */ = {
 			isa = PBXGroup;
 			children = (
+				E3887F222E016945003035A8 /* Movie Service */,
 				E3210AE22E015B2F00D8D761 /* NetworkManager.swift */,
 				E3210AE42E015B3C00D8D761 /* NetworkManager+ParseResponse.swift */,
 				E3210AE62E015B4800D8D761 /* NetworkDefaults.swift */,
 			);
 			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		E3210AE82E01632000D8D761 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				E3210AE92E0163BE00D8D761 /* Environment.swift */,
+				E3210AEB2E0163E600D8D761 /* AppConfig.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		E329050E2E016EC10002F28C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E32905112E016EE40002F28C /* Movie */,
+				E329050F2E016ED90002F28C /* NetworkError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E32905112E016EE40002F28C /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				E32905162E01723F0002F28C /* GenreModel.swift */,
+				E32905122E016EF70002F28C /* MovieModel.swift */,
+				E32905182E017BF90002F28C /* GenreResponseModel.swift */,
+				E32905142E016F0B0002F28C /* NetworkResponse.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		E329051E2E017D920002F28C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E329051F2E017DA60002F28C /* BaseViewModelProtocol.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E3887F222E016945003035A8 /* Movie Service */ = {
+			isa = PBXGroup;
+			children = (
+				E3887F232E016955003035A8 /* MovieService.swift */,
+				E3887F252E016966003035A8 /* NetworkManager+Movie.swift */,
+			);
+			path = "Movie Service";
+			sourceTree = "<group>";
+		};
+		E3887F272E016AB9003035A8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E3887F282E016AD5003035A8 /* Home  */,
+				E329051A2E017D3A0002F28C /* ViewController.swift */,
+				E329051B2E017D3A0002F28C /* ViewController.xib */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E3887F282E016AD5003035A8 /* Home  */ = {
+			isa = PBXGroup;
+			children = (
+				E3887F2B2E016B76003035A8 /* HomeView.swift */,
+				E3887F292E016B08003035A8 /* HomeViewModel.swift */,
+			);
+			path = "Home ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,17 +313,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3210AB42E0158EF00D8D761 /* Build configuration list for PBXNativeTarget "Jahez_Task" */;
 			buildPhases = (
+				91867F9640252E19C5A548C2 /* [CP] Check Pods Manifest.lock */,
 				E3210A872E0158EE00D8D761 /* Sources */,
 				E3210A882E0158EE00D8D761 /* Frameworks */,
 				E3210A892E0158EE00D8D761 /* Resources */,
+				E890CFAA51FF6ADEB6E18BFE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Jahez_Task;
-			packageProductDependencies = (
-			);
 			productName = Jahez_Task;
 			productReference = E3210A8B2E0158EE00D8D761 /* Jahez_Task.app */;
 			productType = "com.apple.product-type.application";
@@ -217,8 +342,6 @@
 				E3210AA32E0158EF00D8D761 /* PBXTargetDependency */,
 			);
 			name = Jahez_TaskTests;
-			packageProductDependencies = (
-			);
 			productName = Jahez_TaskTests;
 			productReference = E3210AA12E0158EF00D8D761 /* Jahez_TaskTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -237,8 +360,6 @@
 				E3210AAD2E0158EF00D8D761 /* PBXTargetDependency */,
 			);
 			name = Jahez_TaskUITests;
-			packageProductDependencies = (
-			);
 			productName = Jahez_TaskUITests;
 			productReference = E3210AAB2E0158EF00D8D761 /* Jahez_TaskUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -293,6 +414,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3210ADB2E015A8800D8D761 /* LaunchScreen.storyboard in Resources */,
+				E3210AEC2E0163E600D8D761 /* AppConfig.xcconfig in Resources */,
+				E329051C2E017D3A0002F28C /* ViewController.xib in Resources */,
 				E3210ACD2E015A2E00D8D761 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,16 +436,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		91867F9640252E19C5A548C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jahez_Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E890CFAA51FF6ADEB6E18BFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jahez_Task/Pods-Jahez_Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jahez_Task/Pods-Jahez_Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Jahez_Task/Pods-Jahez_Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E3210A872E0158EE00D8D761 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3887F262E016966003035A8 /* NetworkManager+Movie.swift in Sources */,
 				E3210AE32E015B2F00D8D761 /* NetworkManager.swift in Sources */,
 				E3210AE02E015AF500D8D761 /* Container.swift in Sources */,
+				E3887F2A2E016B08003035A8 /* HomeViewModel.swift in Sources */,
 				E3210AE52E015B3C00D8D761 /* NetworkManager+ParseResponse.swift in Sources */,
+				E3887F2C2E016B77003035A8 /* HomeView.swift in Sources */,
+				E32905222E0181D10002F28C /* AppDelegate+Extension.swift in Sources */,
+				E32905172E01723F0002F28C /* GenreModel.swift in Sources */,
+				E32905132E016EF70002F28C /* MovieModel.swift in Sources */,
+				E3210AEA2E0163BE00D8D761 /* Environment.swift in Sources */,
+				E32905202E017DA60002F28C /* BaseViewModelProtocol.swift in Sources */,
+				E329051D2E017D3A0002F28C /* ViewController.swift in Sources */,
 				E3210ACB2E015A2E00D8D761 /* AppDelegate.swift in Sources */,
+				E32905152E016F0B0002F28C /* NetworkResponse.swift in Sources */,
 				E3210AE72E015B4800D8D761 /* NetworkDefaults.swift in Sources */,
+				E32905102E016ED90002F28C /* NetworkError.swift in Sources */,
+				E3887F242E016955003035A8 /* MovieService.swift in Sources */,
+				E32905192E017BF90002F28C /* GenreResponseModel.swift in Sources */,
 				E3210ACC2E015A2E00D8D761 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,18 +544,20 @@
 /* Begin XCBuildConfiguration section */
 		E3210AB52E0158EF00D8D761 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E31D810A42058E2F474D0B3D /* Pods-Jahez_Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jahez_Task/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,18 +573,20 @@
 		};
 		E3210AB62E0158EF00D8D761 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75F416D87FA48AC852E1EE62 /* Pods-Jahez_Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jahez_Task/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -416,6 +602,7 @@
 		};
 		E3210AB72E0158EF00D8D761 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3210AEB2E0163E600D8D761 /* AppConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -479,6 +666,7 @@
 		};
 		E3210AB82E0158EF00D8D761 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3210AEB2E0163E600D8D761 /* AppConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
