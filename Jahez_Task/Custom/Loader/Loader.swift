@@ -13,7 +13,7 @@ extension View {
         
         ZStack {
             self
-                .disabled(isLoading) 
+                .disabled(isLoading)
                 .blur(radius: isLoading ? 1 : 0)
             
             if isLoading {

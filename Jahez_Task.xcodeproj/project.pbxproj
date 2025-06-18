@@ -28,7 +28,6 @@
 		E32905192E017BF90002F28C /* GenreResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32905182E017BF90002F28C /* GenreResponseModel.swift */; };
 		E329051C2E017D3A0002F28C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E329051B2E017D3A0002F28C /* ViewController.xib */; };
 		E329051D2E017D3A0002F28C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329051A2E017D3A0002F28C /* ViewController.swift */; };
-		E32905202E017DA60002F28C /* BaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329051F2E017DA60002F28C /* BaseViewModelProtocol.swift */; };
 		E32905222E0181D10002F28C /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32905212E0181D10002F28C /* AppDelegate+Extension.swift */; };
 		E32905262E028EC40002F28C /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32905252E028EC40002F28C /* AppNavigationController.swift */; };
 		E32905292E028F020002F28C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E32905282E028F020002F28C /* Colors.xcassets */; };
@@ -36,6 +35,7 @@
 		E329052F2E02929D0002F28C /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329052E2E02929D0002F28C /* AppManager.swift */; };
 		E32905312E0292F10002F28C /* SceneDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32905302E0292F10002F28C /* SceneDelegate+Extension.swift */; };
 		E32905342E02A4430002F28C /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32905332E02A4430002F28C /* Loader.swift */; };
+		E32905382E02AB950002F28C /* AppAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32905372E02AB950002F28C /* AppAlertManager.swift */; };
 		E3887F242E016955003035A8 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3887F232E016955003035A8 /* MovieService.swift */; };
 		E3887F262E016966003035A8 /* NetworkManager+Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3887F252E016966003035A8 /* NetworkManager+Movie.swift */; };
 		E3887F2A2E016B08003035A8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3887F292E016B08003035A8 /* HomeViewModel.swift */; };
@@ -87,7 +87,6 @@
 		E32905182E017BF90002F28C /* GenreResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreResponseModel.swift; sourceTree = "<group>"; };
 		E329051A2E017D3A0002F28C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E329051B2E017D3A0002F28C /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		E329051F2E017DA60002F28C /* BaseViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelProtocol.swift; sourceTree = "<group>"; };
 		E32905212E0181D10002F28C /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
 		E32905252E028EC40002F28C /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		E32905282E028F020002F28C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		E329052E2E02929D0002F28C /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		E32905302E0292F10002F28C /* SceneDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+Extension.swift"; sourceTree = "<group>"; };
 		E32905332E02A4430002F28C /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		E32905372E02AB950002F28C /* AppAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlertManager.swift; sourceTree = "<group>"; };
 		E3887F232E016955003035A8 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		E3887F252E016966003035A8 /* NetworkManager+Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Movie.swift"; sourceTree = "<group>"; };
 		E3887F292E016B08003035A8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -182,7 +182,6 @@
 			children = (
 				E3210AC52E015A2E00D8D761 /* Info.plist */,
 				E3210AC32E015A2E00D8D761 /* AppDelegate+SceneDelegate */,
-				E329051E2E017D920002F28C /* Base */,
 				E3210AD92E015A6B00D8D761 /* StoryBoard */,
 				E3210ADC2E015AB600D8D761 /* Resources */,
 				E3210AE12E015B1500D8D761 /* NetworkServices */,
@@ -287,17 +286,10 @@
 			path = Movie;
 			sourceTree = "<group>";
 		};
-		E329051E2E017D920002F28C /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				E329051F2E017DA60002F28C /* BaseViewModelProtocol.swift */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		E32905232E028EA60002F28C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				E32905352E02AB720002F28C /* AppAlertManager */,
 				E32905322E02A42E0002F28C /* Loader */,
 				E32905242E028EAD0002F28C /* NavigationControllers */,
 			);
@@ -342,6 +334,14 @@
 				E32905332E02A4430002F28C /* Loader.swift */,
 			);
 			path = Loader;
+			sourceTree = "<group>";
+		};
+		E32905352E02AB720002F28C /* AppAlertManager */ = {
+			isa = PBXGroup;
+			children = (
+				E32905372E02AB950002F28C /* AppAlertManager.swift */,
+			);
+			path = AppAlertManager;
 			sourceTree = "<group>";
 		};
 		E3887F222E016945003035A8 /* Movie Service */ = {
@@ -534,13 +534,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Jahez_Task/Pods-Jahez_Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Jahez_Task/Pods-Jahez_Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -558,6 +554,7 @@
 				E3210AE32E015B2F00D8D761 /* NetworkManager.swift in Sources */,
 				E3210AE02E015AF500D8D761 /* Container.swift in Sources */,
 				E3887F2A2E016B08003035A8 /* HomeViewModel.swift in Sources */,
+				E32905382E02AB950002F28C /* AppAlertManager.swift in Sources */,
 				E329052C2E028F4D0002F28C /* UIColor+app.swift in Sources */,
 				E3210AE52E015B3C00D8D761 /* NetworkManager+ParseResponse.swift in Sources */,
 				E3887F2C2E016B77003035A8 /* HomeView.swift in Sources */,
@@ -569,7 +566,6 @@
 				E32905312E0292F10002F28C /* SceneDelegate+Extension.swift in Sources */,
 				E3210AEA2E0163BE00D8D761 /* Environment.swift in Sources */,
 				E32905342E02A4430002F28C /* Loader.swift in Sources */,
-				E32905202E017DA60002F28C /* BaseViewModelProtocol.swift in Sources */,
 				E329051D2E017D3A0002F28C /* ViewController.swift in Sources */,
 				E3210ACB2E015A2E00D8D761 /* AppDelegate.swift in Sources */,
 				E32905152E016F0B0002F28C /* NetworkResponse.swift in Sources */,

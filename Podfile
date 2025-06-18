@@ -7,5 +7,6 @@ target 'Jahez_Task' do
 
   # Pods for Jahez_Task
   pod 'Moya'
+  pod 'SwiftMessages'
 
 end

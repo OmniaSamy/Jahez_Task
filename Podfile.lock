@@ -4,19 +4,25 @@ PODS:
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
+  - SwiftMessages (10.0.1):
+    - SwiftMessages/App (= 10.0.1)
+  - SwiftMessages/App (10.0.1)
 
 DEPENDENCIES:
   - Moya
+  - SwiftMessages
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Moya
+    - SwiftMessages
 
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  SwiftMessages: 759b4a0bf5c3a116a0d7e8a34b098ba83c458625
 
-PODFILE CHECKSUM: a1c711ad7d717d047ff7e1b8841dacb708d8f677
+PODFILE CHECKSUM: ef8eaf1f2d814bc74d488da665a3c091043d599a
 
 COCOAPODS: 1.14.3
