@@ -14,6 +14,7 @@ struct MovieModel: Codable, Identifiable {
     var title: String?
     var releaseDate: String?
     var overview: String?
+    var genreIDList: [Int]?
     
     enum CodingKeys: String, CodingKey {
         
@@ -22,5 +23,6 @@ struct MovieModel: Codable, Identifiable {
         case posterPath = "poster_path"
         case releaseDate = "release_date"
         case overview = "overview"
+        case genreIDList = "genre_ids"
     }
 }

@@ -10,15 +10,15 @@ import SwiftUI
 struct GenreCell: View {
     
     let genreModel: GenreModel?
-    let isSelected: Bool = false
+    let isSelected: Bool?
     
     var body: some View {
         Text(genreModel?.name ?? "")
             .font(.system(size: 14, weight: .medium))
-            .foregroundColor(isSelected ? .white : .red)
+            .foregroundColor( (isSelected ?? false) ? .white : .red)
             .padding(.horizontal, 16)
             .padding(.vertical, 8)
-            .background(Color.white)
+            .background( (isSelected ?? false) ? Color.red : Color.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.red, lineWidth: 2)
@@ -28,5 +28,5 @@ struct GenreCell: View {
 }
 
 #Preview {
-    GenreCell(genreModel: GenreModel(id: 1, name: "Action"))
+    GenreCell(genreModel: GenreModel(id: 1, name: "Action"), isSelected: false)
 }

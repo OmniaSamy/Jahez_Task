@@ -31,7 +31,10 @@ struct HomeView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
                         ForEach(viewModel.genresList) { genre in
-                            GenreCell(genreModel: genre)
+                            GenreCell(genreModel: genre, isSelected: viewModel.selectedGenre?.id == genre.id)
+                                .onTapGesture {
+                                    viewModel.selectGenre(genre)
+                                }
                         }
                     }
                     .padding(.horizontal, padding)

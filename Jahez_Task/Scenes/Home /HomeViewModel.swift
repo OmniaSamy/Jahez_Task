@@ -14,6 +14,12 @@ class HomeViewModel: ObservableObject {
     
     @Published var isLoading: Bool = false
     
+    // for genre filter
+    @Published var selectedGenre: GenreModel? = nil
+    
+    // for search
+    @Published var searchText: String = ""
+    
     // for paginagtion
     @Published var isLoadingMore: Bool = false
     var currentPage = 1
@@ -40,10 +46,11 @@ extension HomeViewModel {
         })
     }
     
-    func getTrendingMovies(page: Int = 1) {
+    func getTrendingMovies(page: Int = 1, genreID: Int? = nil) {
         
         isLoading = true
         NetworkManager.shared.getTrendingMovies(page: page,
+                                                genreID: genreID,
                                                 completion: { [weak self] (result: Result<NetworkResponse<MovieModel>, NetworkError>, _) in
             self?.isLoadingMore = false
             switch result {
@@ -68,9 +75,19 @@ extension HomeViewModel {
            guard !isLoadingMore else { return }
            if currentMovie.id == trendingMoviesList.last?.id {
                isLoadingMore = true
-               getTrendingMovies(page: self.currentPage + 1)
+               getTrendingMovies(page: self.currentPage + 1, genreID: self.selectedGenre?.id)
            }
        }
+}
+
+// MARK: genre filter
+extension HomeViewModel {
+    
+    func selectGenre(_ genre: GenreModel) {
+        selectedGenre = genre
+        self.trendingMoviesList = []
+        getTrendingMovies(genreID: genre.id)
+    }
 }
 
 // MARK: moc function

@@ -10,7 +10,7 @@ import Moya
 
 enum MovieService {
     case getOfficialGenresList
-    case getTrendingMovies(page: Int)
+    case getTrendingMovies(page: Int, genreID: Int?)
 }
 
 extension MovieService: TargetType {
@@ -47,10 +47,15 @@ extension MovieService: TargetType {
         case .getOfficialGenresList:
             return .requestParameters(parameters: ["api_key": NetworkManager.networkConfig.apiKey],
                                       encoding: URLEncoding.default)
-        case .getTrendingMovies(let page):
-            return .requestParameters(parameters: ["page": page,
-                                                   "include_video": false,
-                                                   "api_key": NetworkManager.networkConfig.apiKey],
+        case .getTrendingMovies(let page, let genreID):
+            
+            var parames = ["page": page,
+                           "include_video": false,
+                           "api_key": NetworkManager.networkConfig.apiKey] as [String : Any]
+            if genreID != nil {
+                parames["with_genres"] = genreID
+            }
+            return .requestParameters(parameters: parames,
                                       encoding: URLEncoding.default)
         }
     }
