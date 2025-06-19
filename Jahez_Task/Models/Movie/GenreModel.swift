@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct GenreModel: Codable {
+struct GenreModel: Codable, Identifiable {
     
-    var genreID: Int?
+    var id: Int?
     var name: String?
     
     enum CodingKeys: String, CodingKey {
         
-        case genreID = "id"
+        case id = "id"
         case name = "name"
     }
 }

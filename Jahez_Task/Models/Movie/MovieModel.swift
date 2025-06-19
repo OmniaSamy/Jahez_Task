@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct MovieModel: Codable {
+struct MovieModel: Codable, Identifiable {
     
-    var movieID: Int?
+    var id: Int?
     var posterPath: String?
     var title: String?
     var releaseDate: String?
@@ -17,7 +17,7 @@ struct MovieModel: Codable {
     
     enum CodingKeys: String, CodingKey {
         
-        case movieID = "id"
+        case id = "id"
         case title = "original_title"
         case posterPath = "poster_path"
         case releaseDate = "release_date"
