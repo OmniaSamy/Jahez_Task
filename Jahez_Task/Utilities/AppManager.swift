@@ -17,4 +17,11 @@ class AppManager {
         window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()
     }
+    
+    func pushViewController(viewController: UIViewController) {
+        
+        if let nav = window?.rootViewController as? UINavigationController {
+            nav.pushViewController(viewController, animated: true)
+        }
+    }
 }

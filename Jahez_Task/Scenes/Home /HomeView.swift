@@ -57,6 +57,9 @@ struct HomeView: View {
                                 .frame(width: cellWidth)
                                 .onAppear {
                                     viewModel.loadMoreIfNeeded(currentMovie: movie)
+                                }.onTapGesture {
+                                    print("testest")
+                                    AppManager.shared.pushViewController(viewController: Container.Movie.getMovieDetailsScreen(movie: movie, genres: viewModel.genresList))
                                 }
                         }
                         if viewModel.isLoadingMore {

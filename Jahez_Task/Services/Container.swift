@@ -25,5 +25,14 @@ class Container {
             hostingController.title = "Movies"
             return hostingController
         }
+        
+        class func getMovieDetailsScreen(movie: MovieModel, genres: [GenreModel]) -> UIViewController {
+            
+            let viewModel = MovieDetailsViewModel(movie: movie, genres: genres)
+            let movieDetailsView = MovieDetailsView(viewModel: viewModel)
+            let hostingController = UIHostingController(rootView: movieDetailsView)
+            hostingController.title = movie.title
+            return hostingController
+        }
     }
 }
