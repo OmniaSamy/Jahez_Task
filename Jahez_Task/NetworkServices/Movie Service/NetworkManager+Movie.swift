@@ -19,11 +19,10 @@ extension NetworkManager {
     }
     
     func getTrendingMovies(page: Int,
-                           genreID: Int?,
                            completion: @escaping(_ result: Swift.Result<NetworkResponse<MovieModel>, NetworkError>,
                                                  _ statusCode: Int?) -> Void) {
         
-        provider.request(MultiTarget(MovieService.getTrendingMovies(page: page, genreID: genreID))) { result in
+        provider.request(MultiTarget(MovieService.getTrendingMovies(page: page))) { result in
             self.parseResponse(moyaResult: result, completion: completion)
         }
     }

@@ -22,6 +22,7 @@ class Container {
             let viewModel = HomeViewModel()
             let homeView = HomeView(viewModel: viewModel)
             let hostingController = UIHostingController(rootView: homeView)
+            hostingController.title = "Movies"
             return hostingController
         }
     }
