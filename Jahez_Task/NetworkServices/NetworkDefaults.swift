@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct NetworkDefaults {
+    
+    var baseUrl: String
+    var apiKey: String
+}

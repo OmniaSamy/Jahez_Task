@@ -1,0 +1,14 @@
+//
+//  Config.xcconfig
+//  Jahez_Task
+//
+//  Created by Omnia Samy on 17/06/2025.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+BASE_URL = api.themoviedb.org
+API_KEY = b0c5439b7e45bfa788fb745a5b6964f5
+
+IMAGE_BASE_URL = image.tmdb.org/t/p/w500
