@@ -45,11 +45,13 @@ extension HomeViewModel {
             case .success(let data):
                 print("data \(data)")
                 self?.genresList.append(contentsOf: data.genres ?? [])
+                self?.saveGenresToDB(allMoviesList: self?.genresList ?? [])
                 
             case .failure(let error):
                 print("error \(error)")
                 AppAlertManager.showError(message: error.errorMessage())
                 
+                self?.fetchGenresFromDB()
             }
         })
     }
@@ -69,9 +71,13 @@ extension HomeViewModel {
                 
                 self?.currentPage = data.page ?? 1
                 
+                self?.saveMoviesToDB(allMoviesList: self?.allMoviesList ?? [])
+                
             case .failure(let error):
                 print("error \(error)")
                 AppAlertManager.showError(message: error.errorMessage())
+                
+                self?.fetchMoviesFromDB()
             }
             self?.isLoading = false
         })
@@ -121,6 +127,36 @@ extension HomeViewModel {
         }
         
         trendingMoviesList = filtered
+    }
+}
+
+// MARK: DB function
+extension HomeViewModel {
+    
+    // genre
+    func saveGenresToDB(allMoviesList: [GenreModel]) {
+        
+        let coreData = CoreDataManager.shared
+        coreData.saveGenres(allMoviesList)
+    }
+    
+    func fetchGenresFromDB() {
+        
+        let coreData = CoreDataManager.shared
+        self.genresList = coreData.loadGenres()
+    }
+    
+    // movie
+    func saveMoviesToDB(allMoviesList: [MovieModel]) {
+        
+        let coreData = CoreDataManager.shared
+        coreData.saveMovies(allMoviesList)
+    }
+    
+    func fetchMoviesFromDB() {
+        
+        let coreData = CoreDataManager.shared
+        self.allMoviesList = coreData.loadMovies()
     }
 }
 

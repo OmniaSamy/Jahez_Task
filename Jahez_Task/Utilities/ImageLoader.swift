@@ -8,51 +8,54 @@
 import Foundation
 import SwiftUI
 
-final class ImageLoader: ObservableObject {
+class ImageCache {
+    static let shared = NSCache<NSString, UIImage>()
+}
+
+class ImageLoader: ObservableObject {
     
     @Published var image: UIImage?
-
-    private static let cache = NSCache<NSURL, UIImage>()
-    private var url: URL?
+    
+    private let url: String
     private var task: URLSessionDataTask?
-
+    
     init(url: String) {
-        self.url = URL(string: url)
+        self.url = url
         loadImage()
     }
-
-    deinit {
-        task?.cancel()
-    }
-
-    func loadImage() {
+    
+    private func loadImage() {
         
-        guard let url else { return }
-
-        // Return from cache if available
-        if let cached = Self.cache.object(forKey: url as NSURL) {
-            self.image = cached
+        // Check if image is already cached
+        if let cachedImage = ImageCache.shared.object(forKey: url as NSString) {
+            self.image = cachedImage
             return
         }
-
-        // Otherwise, fetch from network
-        task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+        
+        // Download image
+        guard let imageURL = URL(string: url) else { return }
+        
+        task = URLSession.shared.dataTask(with: imageURL) { [weak self] data, _, error in
             guard
-                let self,
-                let data,
+                let self = self,
+                let data = data,
                 let downloaded = UIImage(data: data)
             else {
                 return
             }
-
-            // Cache the image
-            Self.cache.setObject(downloaded, forKey: url as NSURL)
-
-            // Publish on main thread
+            
+            // Cache image
+            ImageCache.shared.setObject(downloaded, forKey: self.url as NSString)
+            
             DispatchQueue.main.async {
                 self.image = downloaded
             }
         }
+        
         task?.resume()
+    }
+    
+    deinit {
+        task?.cancel()
     }
 }

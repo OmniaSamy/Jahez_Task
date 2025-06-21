@@ -23,7 +23,7 @@ struct HomeView: View {
             GridItem(.fixed(cellWidth))
         ]
         
-        VStack(spacing: 0) {
+        VStack(spacing: 20) {
             
             // search bar
             SearchBar(text: $viewModel.searchText,
@@ -33,53 +33,50 @@ struct HomeView: View {
             })
             .padding(.horizontal, 16)
             
+            // genre horizontal list
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 10) {
+                    ForEach(viewModel.genresList) { genre in
+                        GenreCell(genreModel: genre, isSelected: viewModel.selectedGenre?.id == genre.id)
+                            .onTapGesture {
+                                viewModel.selectGenre(genre)
+                            }
+                    }
+                }
+                .padding(.horizontal, padding)
+            }
+            
             ScrollView {
                 
-                VStack(alignment: .leading, spacing: 24) {
-                    
-                    // genre horizontal list
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 10) {
-                            ForEach(viewModel.genresList) { genre in
-                                GenreCell(genreModel: genre, isSelected: viewModel.selectedGenre?.id == genre.id)
-                                    .onTapGesture {
-                                        viewModel.selectGenre(genre)
-                                    }
+                // Movies vertical list
+                LazyVGrid(columns: gridColumns, spacing: spacing) {
+                    ForEach(viewModel.trendingMoviesList) { movie in
+                        MovieCell(movie: movie)
+                            .frame(width: cellWidth)
+                            .onAppear {
+                                viewModel.loadMoreIfNeeded(currentMovie: movie)
+                            }.onTapGesture {
+                                print("testest")
+                                AppManager.shared.pushViewController(viewController: Container.Movie.getMovieDetailsScreen(movie: movie, genres: viewModel.genresList))
                             }
-                        }
-                        .padding(.horizontal, padding)
                     }
-                    
-                    // Movies vertical list
-                    LazyVGrid(columns: gridColumns, spacing: spacing) {
-                        ForEach(viewModel.trendingMoviesList) { movie in
-                            MovieCell(movie: movie)
-                                .frame(width: cellWidth)
-                                .onAppear {
-                                    viewModel.loadMoreIfNeeded(currentMovie: movie)
-                                }.onTapGesture {
-                                    print("testest")
-                                    AppManager.shared.pushViewController(viewController: Container.Movie.getMovieDetailsScreen(movie: movie, genres: viewModel.genresList))
-                                }
-                        }
-                        if viewModel.isLoadingMore {
-                            HStack {
-                                Spacer()
-                                ProgressView()
-                                    .padding(.vertical, 20)
-                                Spacer()
-                            }
+                    if viewModel.isLoadingMore {
+                        HStack {
+                            Spacer()
+                            ProgressView()
+                                .padding(.vertical, 20)
+                            Spacer()
                         }
                     }
-                    .padding(.horizontal, padding)
                 }
-            } .padding(.top, 16)
-                .loadingOverlay(isLoading: (viewModel.isLoading && !viewModel.isLoadingMore))
-                .onAppear {
-                    viewModel.getOfficialGenresList()
-                    viewModel.getTrendingMovies()
-                }
-        }
+                .padding(.horizontal, padding)
+            }
+        } .padding(.top, 16)
+            .loadingOverlay(isLoading: (viewModel.isLoading && !viewModel.isLoadingMore))
+            .onAppear {
+                viewModel.getOfficialGenresList()
+                viewModel.getTrendingMovies()
+            }
     }
 }
 

@@ -40,10 +40,17 @@
 		E32905422E0405EB0002F28C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32905412E0405EB0002F28C /* SearchBar.swift */; };
 		E3810FA72E0597BD00F01652 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3810FA62E0597BD00F01652 /* MovieDetailsView.swift */; };
 		E3810FA92E0597EB00F01652 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3810FA82E0597EB00F01652 /* MovieDetailsViewModel.swift */; };
+		E3810FAB2E06DC1900F01652 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3810FAA2E06DC1900F01652 /* CoreData.framework */; };
+		E3810FAE2E06DC6100F01652 /* JahezDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3810FAC2E06DC6100F01652 /* JahezDataModel.xcdatamodeld */; };
+		E3810FC12E06DEA800F01652 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3810FC02E06DEA800F01652 /* CoreDataManager.swift */; };
 		E3887F242E016955003035A8 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3887F232E016955003035A8 /* MovieService.swift */; };
 		E3887F262E016966003035A8 /* NetworkManager+Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3887F252E016966003035A8 /* NetworkManager+Movie.swift */; };
 		E3887F2A2E016B08003035A8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3887F292E016B08003035A8 /* HomeViewModel.swift */; };
 		E3887F2C2E016B77003035A8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3887F2B2E016B76003035A8 /* HomeView.swift */; };
+		E3BADCCF2E06F47F001C9DDE /* CDGenre+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BADCCA2E06F47F001C9DDE /* CDGenre+CoreDataClass.swift */; };
+		E3BADCD02E06F47F001C9DDE /* CDGenre+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BADCCB2E06F47F001C9DDE /* CDGenre+CoreDataProperties.swift */; };
+		E3BADCD12E06F47F001C9DDE /* CDMovie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BADCCC2E06F47F001C9DDE /* CDMovie+CoreDataClass.swift */; };
+		E3BADCD22E06F47F001C9DDE /* CDMovie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BADCCD2E06F47F001C9DDE /* CDMovie+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,10 +110,17 @@
 		E32905412E0405EB0002F28C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		E3810FA62E0597BD00F01652 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		E3810FA82E0597EB00F01652 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
+		E3810FAA2E06DC1900F01652 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E3810FAD2E06DC6100F01652 /* JahezDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JahezDataModel.xcdatamodel; sourceTree = "<group>"; };
+		E3810FC02E06DEA800F01652 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E3887F232E016955003035A8 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		E3887F252E016966003035A8 /* NetworkManager+Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Movie.swift"; sourceTree = "<group>"; };
 		E3887F292E016B08003035A8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E3887F2B2E016B76003035A8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E3BADCCA2E06F47F001C9DDE /* CDGenre+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDGenre+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E3BADCCB2E06F47F001C9DDE /* CDGenre+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDGenre+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E3BADCCC2E06F47F001C9DDE /* CDMovie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDMovie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E3BADCCD2E06F47F001C9DDE /* CDMovie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDMovie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76C13517F2064415BFBB0210 /* Pods_Jahez_Task.framework in Frameworks */,
+				E3810FAB2E06DC1900F01652 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +162,7 @@
 		B198D87D6E511EA91E1CB293 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3810FAA2E06DC1900F01652 /* CoreData.framework */,
 				111AD701207E01F213646BD6 /* Pods_Jahez_Task.framework */,
 			);
 			name = Frameworks;
@@ -199,6 +215,8 @@
 				E329052D2E0292910002F28C /* Utilities */,
 				E32905232E028EA60002F28C /* Custom */,
 				E3887F272E016AB9003035A8 /* Scenes */,
+				E3BADCCE2E06F47F001C9DDE /* Core Data */,
+				E3810FAC2E06DC6100F01652 /* JahezDataModel.xcdatamodeld */,
 			);
 			path = Jahez_Task;
 			sourceTree = "<group>";
@@ -333,6 +351,7 @@
 			children = (
 				E329052E2E02929D0002F28C /* AppManager.swift */,
 				E329053E2E03462A0002F28C /* ImageLoader.swift */,
+				E3810FC02E06DEA800F01652 /* CoreDataManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -406,6 +425,17 @@
 				E3887F292E016B08003035A8 /* HomeViewModel.swift */,
 			);
 			path = "Home ";
+			sourceTree = "<group>";
+		};
+		E3BADCCE2E06F47F001C9DDE /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				E3BADCCA2E06F47F001C9DDE /* CDGenre+CoreDataClass.swift */,
+				E3BADCCB2E06F47F001C9DDE /* CDGenre+CoreDataProperties.swift */,
+				E3BADCCC2E06F47F001C9DDE /* CDMovie+CoreDataClass.swift */,
+				E3BADCCD2E06F47F001C9DDE /* CDMovie+CoreDataProperties.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -595,10 +625,16 @@
 				E3887F2A2E016B08003035A8 /* HomeViewModel.swift in Sources */,
 				E32905382E02AB950002F28C /* AppAlertManager.swift in Sources */,
 				E329052C2E028F4D0002F28C /* UIColor+app.swift in Sources */,
+				E3810FAE2E06DC6100F01652 /* JahezDataModel.xcdatamodeld in Sources */,
 				E3210AE52E015B3C00D8D761 /* NetworkManager+ParseResponse.swift in Sources */,
 				E3887F2C2E016B77003035A8 /* HomeView.swift in Sources */,
+				E3BADCCF2E06F47F001C9DDE /* CDGenre+CoreDataClass.swift in Sources */,
+				E3BADCD02E06F47F001C9DDE /* CDGenre+CoreDataProperties.swift in Sources */,
+				E3BADCD12E06F47F001C9DDE /* CDMovie+CoreDataClass.swift in Sources */,
+				E3BADCD22E06F47F001C9DDE /* CDMovie+CoreDataProperties.swift in Sources */,
 				E329052F2E02929D0002F28C /* AppManager.swift in Sources */,
 				E32905222E0181D10002F28C /* AppDelegate+Extension.swift in Sources */,
+				E3810FC12E06DEA800F01652 /* CoreDataManager.swift in Sources */,
 				E32905172E01723F0002F28C /* GenreModel.swift in Sources */,
 				E329053B2E030B190002F28C /* GenreCell.swift in Sources */,
 				E329053F2E03462A0002F28C /* ImageLoader.swift in Sources */,
@@ -941,6 +977,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E3810FAC2E06DC6100F01652 /* JahezDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E3810FAD2E06DC6100F01652 /* JahezDataModel.xcdatamodel */,
+			);
+			currentVersion = E3810FAD2E06DC6100F01652 /* JahezDataModel.xcdatamodel */;
+			path = JahezDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E3210A832E0158EE00D8D761 /* Project object */;
 }
